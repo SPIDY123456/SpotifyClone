@@ -1,0 +1,5 @@
+   [[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/pages/index.tsx"
+  status = 200
+  force = true
