@@ -86,20 +86,21 @@ export const authorize =  () => {
 //         window.location.href = "/";
 //     }
 // };
+    }
 
-//  const refreshSpotifyToken = async (refresh_token: string) => {
-//     const body = new URLSearchParams({
-//         grant_type: "refresh_token" || "",
-//         refresh_token: refresh_token,
-//         client_id: SPOTIFY_CLIENT_ID || "",
-//     });
-//            const response = await fetch("https://accounts.spotify.com/api/token", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/x-www-form-urlencoded",
-//             },
-//             body:body,
-        //})
+ const refreshSpotifyToken = async (refresh_token: string) => {
+    const body = new URLSearchParams({
+        grant_type: "refresh_token" || "",
+        refresh_token: refresh_token,
+        client_id: SPOTIFY_CLIENT_ID || "",
+    });
+           const response = await fetch("https://accounts.spotify.com/api/token", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body:body,
+        })
         .then((response) => {
 
             if (!response.ok) {
