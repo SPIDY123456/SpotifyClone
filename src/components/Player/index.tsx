@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react'
-import { getTracks } from "~/API/searchTrack";
+import { getTracks } from "~/API/searchTrack.tsx";
 import styles from "../Player/Player.module.css"; 
 import SpotifyPlayer from 'react-spotify-web-playback';
 
